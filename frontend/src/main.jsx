@@ -6,12 +6,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>Hello world!</div>,
-  },
-]);
+import { router } from './routes';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
