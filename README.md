@@ -1,7 +1,7 @@
 
 # Django React Integrated Template
 
-This is a template which is combined of django and rect (with routers) to reduce the extra time of developer.
+This is a template which is combined of django and rect (with routers and Zustand State Management ) to reduce the extra time of developer.
 
 
 
