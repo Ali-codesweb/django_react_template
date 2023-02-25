@@ -2,11 +2,11 @@ import os
 import glob
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
-
-
+from django.core.management.utils import get_random_secret_key
+from django.conf import settings
 class Command(BaseCommand):
     help = 'Renames the Project'
-
+    settings.SECRET_KEY = get_random_secret_key()
     def add_arguments(self, parser):
         parser.add_argument('old', nargs='+', type=str, help="current project name")
         parser.add_argument('new', nargs='+', type=str, help="new project name")

@@ -42,7 +42,7 @@ python manage.py runserver
  to run the project.  
 
 
-## To rename the project name
+## To rename the project name and generate new random secret key
 
 1. Firstly rename the root project name ( which will be "django_react_template" initially )
 
@@ -50,6 +50,6 @@ python manage.py runserver
 ```bash 
 python manage.py renameproject old_name new_name
 ```
-where old_name will essentially be "django_react_template" and new_name will be your desired name.
+where old_name will essentially be "django_react_template" and new_name will be your desired name and new unique secret key will be generated
 
 
