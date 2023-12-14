@@ -5,8 +5,8 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from django.contrib.auth.models import User
-from .serializers import (UserSerializerToken,
-                              UserSerializerWithToken)
+from .serializers import (UserSerializerWithoutToken,
+                          UserSerializerWithToken)
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -36,6 +36,5 @@ def register_user(request):
     except:
         message = {'message': 'This user already exists'}
         return Response(message, status=status.HTTP_403_FORBIDDEN)
-    serializer = UserSerializerToken(user)
+    serializer = UserSerializerWithoutToken(user)
     return Response(serializer.data)
-

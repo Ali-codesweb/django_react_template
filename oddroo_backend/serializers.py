@@ -4,7 +4,7 @@ from rest_framework_simplejwt.tokens import AccessToken
 
 
 
-class UserSerializerToken(serializers.ModelSerializer):
+class UserSerializerWithoutToken(serializers.ModelSerializer):
     is_admin = serializers.SerializerMethodField(read_only=True)
     first_name = serializers.SerializerMethodField(read_only=True)
     last_name = serializers.SerializerMethodField(read_only=True)
